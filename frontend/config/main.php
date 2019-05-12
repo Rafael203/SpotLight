@@ -11,6 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'video' => [
+            'class' => 'frontend\modules\video\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -47,11 +52,12 @@ return [
                 'contact' => 'site/contact',
                 'services' => 'site/services',
                 'photos' => 'site/photo',
-                'videos' => 'site/video',
+                'videos' => 'video/video',
                 'signup' => 'site/signup',
                 'login' => 'site/login',
                 'logout' => '/site/logout',
                 '/photos/photo_cat/<cat_id>' => 'site/photo',
+                '/video/<id>' => 'video/video/video' 
             ],
         ],
 

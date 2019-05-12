@@ -4,7 +4,7 @@
         <h3 class="title-w3 text-center text-wh mb-5 let font-weight-bold">What Our People Say</h3>
         <div class="row pt-xl-4">
             <?php
-            foreach ($team as $one) {
+            foreach ($people as $one) {
                 ?>
                 <div class="col-md-4 test-grid px-lg-5">
                     <div class="test-info text-center">

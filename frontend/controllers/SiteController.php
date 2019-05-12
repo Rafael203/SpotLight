@@ -3,7 +3,7 @@ namespace frontend\controllers;
 
 use app\models\Info;
 use app\models\PhotoCategories;
-use app\models\Projects;
+use app\models\Photo;
 use app\models\Services;
 use app\models\Team;
 use app\models\VideoCategories;
@@ -81,9 +81,9 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $services = Services::find()->asArray()->all();
-        $team = Team::find()->limit(3)->asArray()->all();
+        $people = Team::find()->limit(3)->where(['isTeam' =>  0])->asArray()->all();
 
-        return $this->render('index', ['serv' =>$services, 'team' => $team]);
+        return $this->render('index', ['serv' =>$services, 'people' => $people]);
     }
 
     /**
@@ -124,34 +124,22 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        $team = Team::find()->limit(3)->asArray()->all();
+        $team = Team::find()->limit(3)->where(['isTeam' => 1])->asArray()->all();
+        $people = Team::find()->limit(3)->where(['isTeam' => 0])->asArray()->all();
 
-        return $this->render('about', ['team' => $team]);
+        return $this->render('about', ['team' => $team, 'people' => $people]);
     }
 
     public function actionPhoto($cat_id = 0)
     {
-        $projs = Projects::find()->asArray()->all();
-       // echo '<pre>';
-       // var_dump($projs);
-       // die;
-        if($cat_id){
-            $projs = $projs->where(['photo-cat-id' => $cat_id]);
-        }
-        $projs = Projects::find()->asArray()->all();
+        $projs = Photo::find()->asArray()->all();
+        // if($cat_id){
+        //     $projs = $projs->where(['photo-cat-id' => $cat_id]);
+        // }
         $cat_ph = PhotoCategories::find()->asArray()->all();
 
         return $this->render('photo', ['projs' => $projs, 'cat_ph' => $cat_ph]);
     }
-
-    public function actionVideo()
-    {
-        $projs = Projects::find()->asArray()->all();
-        $cat_vid = VideoCategories::find()->asArray()->all();
-
-        return $this->render('video', ['projs' => $projs, 'cat_vid' => $cat_vid]);
-    }
-
 
 
 }

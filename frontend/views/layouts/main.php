@@ -35,13 +35,13 @@ AppAsset::register($this);
                 <!-- nav -->
                 <nav class="py-4">
                     <div id="logo">
-                        <h1><a href="<?= \yii\helpers\Url::to(['site/index'])?>">SpotLight</a></h1>
+                        <h1><a href="<?= \yii\helpers\Url::to(['/'])?>">SpotLight</a></h1>
                     </div>
 
                     <label for="drop" class="toggle">Menu</label>
                     <input type="checkbox" id="drop" />
                     <ul class="menu mt-2">
-                        <li><a href="<?= \yii\helpers\Url::to(['site/index'])?>">Home</a></li>
+                        <li><a href="<?= \yii\helpers\Url::to(['/'])?>">Home</a></li>
                         <li><a href="<?= \yii\helpers\Url::to(['/about'])?>">About</a></li>
                         <li>
                             <!-- First Tier Drop Down -->
@@ -54,8 +54,6 @@ AppAsset::register($this);
                             </ul>
                         </li>
                         <li><a href="<?= \yii\helpers\Url::to(['/contact'])?>">Contact</a></li>
-                        <li><a href="<?= \yii\helpers\Url::to(['/signup'])?>">Sign Up</a></li>
-                        <li><a href="<?= \yii\helpers\Url::to(['/login'])?>">Login</a></li>
 
                     </ul>
                 </nav>
@@ -105,9 +103,8 @@ AppAsset::register($this);
                         </div>
                         <p><a href="<?= \yii\helpers\Url::to(['site/index'])?>">Home</a></p>
                         <p><a href="<?= \yii\helpers\Url::to(['/about'])?>">About</a></p>
-                        <p><a href="<?= \yii\helpers\Url::to(['/gallery'])?>">Gallery</a></p>
-                        <p><a href="<?= \yii\helpers\Url::to(['/signup'])?>">SignUp</a></p>
-                        <p><a href="<?= \yii\helpers\Url::to(['/login'])?>">Login</a></p>
+                        <p><a href="<?= \yii\helpers\Url::to(['/photos'])?>">Photos</a></p>
+                        <p><a href="<?= \yii\helpers\Url::to(['/videos'])?>">Videos</a></p>
                     </div>
                 </div>
 

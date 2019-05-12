@@ -31,18 +31,18 @@
         <h3 class="title-w3 text-center text-wh mb-5 let font-weight-bold">What Our People Say</h3>
         <div class="row pt-xl-4">
             <?php
-            foreach ($team as $one){
-            ?>
+            foreach ($people as $one) {
+                ?>
                 <div class="col-md-4 test-grid px-lg-5">
                     <div class="test-info text-center">
                         <p class="text-li">"<?= $one['what_say']?>"</p>
-                        <div class="test-img text-center mt-4" style="width: 30%">
-                            <img src="<?= \yii\helpers\Url::to('@web/files/images/'.$one['image'])?>" class="img-fluid" alt="user-image">
+                        <div class="test-img text-center mt-4">
+                            <img src="<?= \yii\helpers\Url::to('@web/images/'.$one['image']) ?>" class="rounded-circle" style="width: 30%" alt="user-image">
                         </div>
                         <h3 class="mt-md-4 mt-3"><?= $one['name']?></h3>
                     </div>
                 </div>
-            <?php
+                <?php
             }
             ?>
         </div>
