@@ -56,8 +56,8 @@ return [
                 'signup' => 'site/signup',
                 'login' => 'site/login',
                 'logout' => '/site/logout',
-                'photos/photo_cat/<cat_id>' => 'site/photo',
-                'video/<id>' => 'video/video/video'
+                '/photos/photo_cat/<cat_id>' => 'site/photo',
+                '/video/<id>' => 'video/video/video' 
             ],
         ],
 

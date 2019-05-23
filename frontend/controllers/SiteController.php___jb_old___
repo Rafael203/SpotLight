@@ -133,9 +133,9 @@ class SiteController extends Controller
     public function actionPhoto($cat_id = 0)
     {
         $projs = Photo::find()->asArray()->all();
-         if($cat_id){
-             $projs = $projs->where(['photo-cat-id' => $cat_id]);
-         }
+        // if($cat_id){
+        //     $projs = $projs->where(['photo-cat-id' => $cat_id]);
+        // }
         $cat_ph = PhotoCategories::find()->asArray()->all();
 
         return $this->render('photo', ['projs' => $projs, 'cat_ph' => $cat_ph]);

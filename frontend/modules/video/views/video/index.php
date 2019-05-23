@@ -16,8 +16,6 @@
                         </a>
                     </div>
                     <?php
-                    echo 'fddfa';
-                    die;
             }
             ?>
         </div>

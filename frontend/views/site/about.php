@@ -1,5 +1,5 @@
 <!-- testimonials -->
-<section class="testimonials py-5" id="testi">
+<section class="testimonials py-5" style="background: url(../images/banner1.jpg)no-repeat center;" id="testi">
     <div class="container py-xl-5 py-lg-3">
         <h3 class="title-w3 text-center text-wh mb-5 let font-weight-bold">What Our People Say</h3>
         <div class="row pt-xl-4">

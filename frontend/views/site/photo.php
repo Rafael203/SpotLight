@@ -29,7 +29,7 @@
                 ?>
                 <div class="col-md-4 gal-img">
                     <a href="#gal<?= $proj['id'] ?>"><img
-                                src="<?= \yii\helpers\Url::to('@web/files/images/' . $proj['src']) ?>" alt="Presell"
+                                src="<?= \yii\helpers\Url::to('@web/images/' . $proj['src']) ?>" alt="Presell"
                                 class="img-fluid"></a>
                 </div>
                 <?php
