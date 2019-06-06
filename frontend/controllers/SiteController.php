@@ -2,8 +2,6 @@
 namespace frontend\controllers;
 
 use app\models\Info;
-use app\models\PhotoCategories;
-use app\models\Photo;
 use app\models\Services;
 use app\models\Team;
 use app\models\VideoCategories;
@@ -130,15 +128,19 @@ class SiteController extends Controller
         return $this->render('about', ['team' => $team, 'people' => $people]);
     }
 
-    public function actionPhoto($cat_id = 0)
+    public function actionPhotos($cat_id = 0, $id = 0)
     {
         $projs = Photo::find()->asArray()->all();
          if($cat_id){
              $projs = $projs->where(['photo-cat-id' => $cat_id]);
-         }
-        $cat_ph = PhotoCategories::find()->asArray()->all();
+         }        $cat_ph = PhotoCategories::find()->asArray()->all();
 
         return $this->render('photo', ['projs' => $projs, 'cat_ph' => $cat_ph]);
+    }
+    public  function  actionPhoto($id = 0){
+        $one_photo = Photo::find()->where(['id' => $id])->asArray()->one();
+        return $this->render('one_photo',['photo' => $one_photo]);
+
     }
 
 

@@ -15,6 +15,9 @@ return [
         'video' => [
             'class' => 'frontend\modules\video\Module',
         ],
+        'photo' => [
+            'class' => 'frontend\modules\photo\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -51,16 +54,14 @@ return [
                 'about' => 'site/about',
                 'contact' => 'site/contact',
                 'services' => 'site/services',
-                'photos' => 'site/photo',
+                'photos' => 'photo/photo/',
                 'videos' => 'video/video',
-                'signup' => 'site/signup',
-                'login' => 'site/login',
                 'logout' => '/site/logout',
                 'photos/photo_cat/<cat_id>' => 'site/photo',
-                'video/<id>' => 'video/video/video'
+                'video/<vid_id>' => 'video/video/',
+                'image/<ph_id>' => 'photo/photo/photo',
             ],
         ],
-
     ],
     'params' => $params,
 ];

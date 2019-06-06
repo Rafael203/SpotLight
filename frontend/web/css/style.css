@@ -260,7 +260,7 @@ li > a:only-child:after {
         color: #333;
     }
 
-    /* Hide the navigation menu by default */
+    /* Hide the navigation menu by photo */
     /* Also hide the  */
     .toggle + a,
     .menu {

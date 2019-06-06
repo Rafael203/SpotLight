@@ -15,8 +15,10 @@ class VideoController extends Controller
      * Renders the index view for the module
      * @return string
      */
-    public function actionIndex($id = 0)
+    public function actionIndex($id = 0, $vid_id = 0)
     {
+        var_dump($vid_id);
+        die;
       $projs = Video::find()->asArray()->all();
       $cat_vid = VideoCategories::find()->asArray()->all();
 
